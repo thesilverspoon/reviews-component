@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
+<<<<<<< Updated upstream
 mongoose.connect('mongodb://Miken:1234@ds263138.mlab.com:63138/restaurants_reviews');
+=======
+mongoose.connect('mongodb://localhost/Restaurants_Reviews')
+>>>>>>> Stashed changes
 
 const restaurantSchema = mongoose.Schema({
   restaurantId: Number,
@@ -32,5 +36,23 @@ function findByRestaurantId(id, callback) {
   });
 }
 
+<<<<<<< Updated upstream
+=======
+function findByRestaurantId(id) {
+  return Restaurant.find({ restaurantId: id }).limit(1).lean();
+}
+
+function findRestaurantByName(name, callback) {
+  restaurant.find({ restaurantName: name}).exec((err, results) => {
+    if(err) {
+      callback(err, null);
+    }else{
+      callback(null, results);
+    }
+  })
+}
+
+
+>>>>>>> Stashed changes
 module.exports.insertOne = insertOne;
 module.exports.findByRestaurantId = findByRestaurantId;
