@@ -6,3 +6,10 @@ coverage
 coverage/
 false
 login.js
+fakedata10M.js
+generateDataFile.json
+npm-debug.log
+generateDataFile.csv
+batchResSpeedFile.csv
+DataFile.csv
+newrelic_agent.log
